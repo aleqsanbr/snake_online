@@ -1,5 +1,4 @@
 version: "3.8"
-
 services:
     game:
         container_name: multiplayer-snake
@@ -9,12 +8,9 @@ services:
         ports:
             - "8082:80"
         working_dir: /home/node/app
-        volumes:
-            - .:/home/node/app
         environment:
             - NODE_ENV=production
         restart: always
-
 networks:
     default:
         driver: bridge
